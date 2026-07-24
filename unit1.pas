@@ -20,6 +20,7 @@ type
     procedure Edit1Click(Sender: TObject);
     procedure Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure Shape1Click(Sender: TObject);
   private
@@ -45,7 +46,6 @@ const
 begin
   with Shape1 do
   begin
-    Height:= Edit1.Height;
     Pen.Style:= psSolid;
     Pen.Color:= clWindowFrame;
     OnMouseEnter:= @CtrlMouseEnter;
@@ -66,9 +66,12 @@ begin
     OnMouseEnter:= @CtrlMouseEnter;
     OnMouseLeave:= @CtrlMouseLeave;
   end;
+end;
 
-
+procedure TForm1.FormShow(Sender: TObject);
+begin
   Button1.Width:= Edit1.Height;
+  Shape1.Height:= Edit1.Height;
 end;
 
 procedure TForm1.Label1Click(Sender: TObject);
