@@ -1,10 +1,10 @@
 object Form1: TForm1
   Left = 586
-  Height = 285
+  Height = 152
   Top = 250
   Width = 374
   Caption = 'Form1'
-  ClientHeight = 285
+  ClientHeight = 152
   ClientWidth = 374
   DesignTimePPI = 120
   LCLVersion = '4.99.0.0'
@@ -53,6 +53,7 @@ object Form1: TForm1
     Top = 48
     Width = 314
     Anchors = [akTop, akLeft, akRight]
+    OnClick = Shape1Click
   end
   object Button2: TButton
     AnchorSideLeft.Control = Button1
@@ -79,5 +80,6 @@ object Form1: TForm1
     Width = 44
     BorderSpacing.Left = 5
     Caption = 'Label1'
+    OnClick = Label1Click
   end
 end

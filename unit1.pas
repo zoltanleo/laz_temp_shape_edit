@@ -20,6 +20,8 @@ type
     procedure Edit1Click(Sender: TObject);
     procedure Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormCreate(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
+    procedure Shape1Click(Sender: TObject);
   private
     FDefaultCursor: TCursor;
     procedure CtrlMouseEnter(Sender: TObject);
@@ -67,6 +69,16 @@ begin
 
 
   Button1.Width:= Edit1.Height;
+end;
+
+procedure TForm1.Label1Click(Sender: TObject);
+begin
+  Shape1Click(Sender);
+end;
+
+procedure TForm1.Shape1Click(Sender: TObject);
+begin
+  if Button2.CanSetFocus then Button2.SetFocus
 end;
 
 procedure TForm1.Edit1Click(Sender: TObject);
