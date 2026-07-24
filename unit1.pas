@@ -17,6 +17,8 @@ type
     Edit1: TEdit;
     Label1: TLabel;
     Shape1: TShape;
+    procedure Edit1Click(Sender: TObject);
+    procedure Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormCreate(Sender: TObject);
   private
     FDefaultCursor: TCursor;
@@ -65,6 +67,17 @@ begin
 
 
   Button1.Width:= Edit1.Height;
+end;
+
+procedure TForm1.Edit1Click(Sender: TObject);
+begin
+  if Button1.CanSetFocus then Button1.SetFocus;
+end;
+
+procedure TForm1.Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
+  );
+begin
+  if Button1.CanSetFocus then Button1.SetFocus;
 end;
 
 procedure TForm1.CtrlMouseEnter(Sender: TObject);

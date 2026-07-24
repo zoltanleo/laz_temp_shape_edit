@@ -39,6 +39,8 @@ object Form1: TForm1
     BorderSpacing.Bottom = 10
     TabOrder = 1
     Text = 'Edit1'
+    OnClick = Edit1Click
+    OnKeyDown = Edit1KeyDown
   end
   object Shape1: TShape
     AnchorSideLeft.Control = Edit1

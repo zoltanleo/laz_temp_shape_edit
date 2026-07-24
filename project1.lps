@@ -22,11 +22,11 @@
         <LoadedDesigner Value="True"/>
         <UsageCount Value="20"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="42"/>
-        <CursorPos X="36" Y="63"/>
+        <TopLine Value="62"/>
+        <CursorPos X="48" Y="81"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="4">
+    <JumpHistory HistoryIndex="9">
       <Position>
         <Filename Value="unit1.pas"/>
       </Position>
@@ -45,6 +45,26 @@
       <Position>
         <Filename Value="unit1.pas"/>
         <Caret Line="45" Column="3" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="64" Column="36" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="75" TopLine="54"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="73" Column="52" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="74" Column="48" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="86" Column="3" TopLine="62"/>
       </Position>
     </JumpHistory>
     <RunParams>
