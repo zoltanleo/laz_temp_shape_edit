@@ -125,7 +125,7 @@ object Form1: TForm1
     Top = 98
     Width = 454
     Anchors = [akTop, akLeft, akRight, akBottom]
-    Caption = 'это просто текст'
+    Caption = 'stxt3'
     Color = clDefault
     ParentColor = False
     TabOrder = 5

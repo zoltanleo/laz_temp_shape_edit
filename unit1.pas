@@ -33,6 +33,7 @@ type
     procedure CtrlMouseEnter(Sender: TObject);
     procedure CtrlMouseLeave(Sender: TObject);
     procedure FocusedCtrl(Sender: TWinControl);
+    procedure PressedCtrl(Sender: TControl);
   public
 
   end;
@@ -88,7 +89,7 @@ begin
     Color:= clWindow;
     OnMouseEnter:= @CtrlMouseEnter;
     OnMouseLeave:= @CtrlMouseLeave;
-    Text:= ' ' + Text;
+    Text:= ' ' + tmpStr;
   end;
 end;
 
@@ -106,7 +107,7 @@ end;
 procedure TForm1.Shape1Click(Sender: TObject);
 begin
   if Button2.CanSetFocus then Button2.SetFocus;
-  FocusedCtrl(Button2);
+  PressedCtrl(Sender as TControl);
 end;
 
 procedure TForm1.stxt3ChangeBounds(Sender: TObject);
@@ -118,22 +119,22 @@ begin
   dx := (edt3.Width  - edt3.ClientWidth)  div 2;
   dy := (edt3.Height - edt3.ClientHeight) div 2;
 
-  stxt3.BorderSpacing.Left   := dx;
-  stxt3.BorderSpacing.Top    := dy;
-  stxt3.BorderSpacing.Right  := dx;
-  stxt3.BorderSpacing.Bottom := dy;
+  stxt3.BorderSpacing.Left   := dx + 1;
+  stxt3.BorderSpacing.Top    := dy + 1;
+  stxt3.BorderSpacing.Right  := dx + 1;
+  stxt3.BorderSpacing.Bottom := dy + 1;
 end;
 
 procedure TForm1.stxt3Click(Sender: TObject);
 begin
   if btn3.CanSetFocus then btn3.SetFocus;
-  FocusedCtrl(btn3);
+  PressedCtrl(Sender as TControl);
 end;
 
 procedure TForm1.Edit1Click(Sender: TObject);
 begin
   if Button1.CanSetFocus then Button1.SetFocus;
-  FocusedCtrl(Button1);
+  PressedCtrl(Sender as TControl);
 end;
 
 procedure TForm1.Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
@@ -156,6 +157,11 @@ end;
 procedure TForm1.FocusedCtrl(Sender: TWinControl);
 begin
   Self.Caption:= Format('Focused control is %s',[TWinControl(Sender).Name]);
+end;
+
+procedure TForm1.PressedCtrl(Sender: TControl);
+begin
+  Self.Caption:= Format('Pressed control is %s',[TControl(Sender).Name]);
 end;
 
 end.
