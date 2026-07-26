@@ -119,10 +119,10 @@ begin
   dx := (edt3.Width  - edt3.ClientWidth)  div 2;
   dy := (edt3.Height - edt3.ClientHeight) div 2;
 
-  StaticText1.BorderSpacing.Left   := dx + 1;
-  StaticText1.BorderSpacing.Top    := dy + 1;
-  StaticText1.BorderSpacing.Right  := dx + 1;
-  StaticText1.BorderSpacing.Bottom := dy + 1;
+  StaticText1.BorderSpacing.Left   := dx + Scale96ToForm(1);
+  StaticText1.BorderSpacing.Top    := dy + Scale96ToForm(2);
+  StaticText1.BorderSpacing.Right  := dx + Scale96ToForm(1);
+  StaticText1.BorderSpacing.Bottom := dy + Scale96ToForm(2);
 end;
 
 procedure TForm1.StaticText1Click(Sender: TObject);
