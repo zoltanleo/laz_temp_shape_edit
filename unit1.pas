@@ -87,6 +87,7 @@ begin
   begin
     Transparent:= False;
     Color:= clWindow;
+    Anchors:= [akLeft, akTop,akRight, akBottom];
     OnMouseEnter:= @CtrlMouseEnter;
     OnMouseLeave:= @CtrlMouseLeave;
     Text:= ' ' + tmpStr;
