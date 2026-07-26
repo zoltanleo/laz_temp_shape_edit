@@ -19,15 +19,15 @@ type
     edt3: TEdit;
     Label1: TLabel;
     Shape1: TShape;
-    stxt3: TStaticText;
+    StaticText1: TStaticText;
     procedure Edit1Click(Sender: TObject);
     procedure Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure Shape1Click(Sender: TObject);
-    procedure stxt3ChangeBounds(Sender: TObject);
-    procedure stxt3Click(Sender: TObject);
+    procedure StaticText1ChangeBounds(Sender: TObject);
+    procedure StaticText1Click(Sender: TObject);
   private
     FDefaultCursor: TCursor;
     procedure CtrlMouseEnter(Sender: TObject);
@@ -82,7 +82,7 @@ begin
     HandleNeeded;      // we ensure that the handle is created and that ClientWidth/Height are correct
   end;
 
-  with stxt3 do
+  with StaticText1 do
   begin
     Transparent:= False;
     Color:= clWindow;
@@ -110,7 +110,7 @@ begin
   PressedCtrl(Sender as TControl);
 end;
 
-procedure TForm1.stxt3ChangeBounds(Sender: TObject);
+procedure TForm1.StaticText1ChangeBounds(Sender: TObject);
 var
   dx, dy: Integer;
 begin
@@ -119,14 +119,18 @@ begin
   dx := (edt3.Width  - edt3.ClientWidth)  div 2;
   dy := (edt3.Height - edt3.ClientHeight) div 2;
 
-  stxt3.BorderSpacing.Left   := dx + 1;
-  stxt3.BorderSpacing.Top    := dy + 1;
-  stxt3.BorderSpacing.Right  := dx + 1;
-  stxt3.BorderSpacing.Bottom := dy + 1;
+  StaticText1.BorderSpacing.Left   := dx + 1;
+  StaticText1.BorderSpacing.Top    := dy + 1;
+  StaticText1.BorderSpacing.Right  := dx + 1;
+  StaticText1.BorderSpacing.Bottom := dy + 1;
 end;
 
-procedure TForm1.stxt3Click(Sender: TObject);
+procedure TForm1.StaticText1Click(Sender: TObject);
 begin
+  {$IFDEF LCLGTK3}
+  ShowMessage('StaticText1 is pressed');
+  {$ENDIF}
+
   if btn3.CanSetFocus then btn3.SetFocus;
   PressedCtrl(Sender as TControl);
 end;

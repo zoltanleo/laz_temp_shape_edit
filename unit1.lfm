@@ -113,7 +113,7 @@ object Form1: TForm1
     Caption = '...'
     TabOrder = 4
   end
-  object stxt3: TStaticText
+  object StaticText1: TStaticText
     AnchorSideLeft.Control = edt3
     AnchorSideTop.Control = edt3
     AnchorSideRight.Control = edt3
@@ -125,11 +125,11 @@ object Form1: TForm1
     Top = 98
     Width = 104
     Anchors = []
-    Caption = 'stxt3'
+    Caption = 'StaticText1'
     Color = clDefault
     ParentColor = False
     TabOrder = 5
-    OnChangeBounds = stxt3ChangeBounds
-    OnClick = stxt3Click
+    OnChangeBounds = StaticText1ChangeBounds
+    OnClick = StaticText1Click
   end
 end
