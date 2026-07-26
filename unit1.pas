@@ -111,6 +111,12 @@ begin
 end;
 
 procedure TForm1.StaticText1ChangeBounds(Sender: TObject);
+const
+  {$IFDEF LCLGTK3}
+  marg = 2;
+  {$ELSE}
+  marg = 1;
+  {$ENDIF}
 var
   dx, dy: Integer;
 begin
@@ -119,10 +125,10 @@ begin
   dx := (edt3.Width  - edt3.ClientWidth)  div 2;
   dy := (edt3.Height - edt3.ClientHeight) div 2;
 
-  StaticText1.BorderSpacing.Left   := dx + Scale96ToForm(1);
-  StaticText1.BorderSpacing.Top    := dy + Scale96ToForm(2);
-  StaticText1.BorderSpacing.Right  := dx + Scale96ToForm(1);
-  StaticText1.BorderSpacing.Bottom := dy + Scale96ToForm(2);
+  StaticText1.BorderSpacing.Left   := dx + Scale96ToForm(marg);
+  StaticText1.BorderSpacing.Top    := dy + Scale96ToForm(marg);
+  StaticText1.BorderSpacing.Right  := dx + Scale96ToForm(marg);
+  StaticText1.BorderSpacing.Bottom := dy + Scale96ToForm(marg);
 end;
 
 procedure TForm1.StaticText1Click(Sender: TObject);

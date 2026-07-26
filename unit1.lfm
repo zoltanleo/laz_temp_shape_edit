@@ -120,11 +120,11 @@ object Form1: TForm1
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = edt3
     AnchorSideBottom.Side = asrBottom
-    Left = 56
-    Height = 22
+    Left = 10
+    Height = 28
     Top = 98
-    Width = 104
-    Anchors = []
+    Width = 454
+    Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'StaticText1'
     Color = clDefault
     ParentColor = False
