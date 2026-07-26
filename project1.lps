@@ -7,7 +7,7 @@
     <Units>
       <Unit>
         <Filename Value="project1.lpr"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="33"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
@@ -21,10 +21,10 @@
         <UnitName Value="Unit1"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="33"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="106"/>
-        <CursorPos X="5" Y="122"/>
+        <TopLine Value="109"/>
+        <CursorPos X="24" Y="123"/>
       </Unit>
       <Unit>
         <Filename Value="unit1.lfm"/>

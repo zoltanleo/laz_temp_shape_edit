@@ -115,8 +115,8 @@ const
   {$IFDEF LCLGTK3}
   marg = 2;
   {$ELSE}
-    {$IFDEF LCLQT6}
-    marg = 1;
+    {$IF DEFINED(LCLQT5) OR DEFINED(LCLQT6)}
+    marg = 2;
     {$ELSE}
     marg = 1;
     {$ENDIF}
