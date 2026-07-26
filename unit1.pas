@@ -76,11 +76,10 @@ begin
 
   with edt3 do
   begin
-    Text:= tmpStr;
     ReadOnly:= True;
     OnMouseEnter:= @CtrlMouseEnter;
     OnMouseLeave:= @CtrlMouseLeave;
-    HandleNeeded;      // гарантируем, что хендл создан и ClientWidth/Height корректны
+    HandleNeeded;      // we ensure that the handle is created and that ClientWidth/Height are correct
   end;
 
   with stxt3 do
@@ -115,7 +114,7 @@ procedure TForm1.stxt3ChangeBounds(Sender: TObject);
 var
   dx, dy: Integer;
 begin
-  if not edt3.HandleAllocated then Exit; // размеры клиентской области известны только после создания хендла
+  if not edt3.HandleAllocated then Exit; // client area dimensions are known only after the handle has been created
 
   dx := (edt3.Width  - edt3.ClientWidth)  div 2;
   dy := (edt3.Height - edt3.ClientHeight) div 2;

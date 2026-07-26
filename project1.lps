@@ -23,8 +23,8 @@
         <LoadedDesigner Value="True"/>
         <UsageCount Value="24"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="81"/>
-        <CursorPos X="41" Y="90"/>
+        <TopLine Value="71"/>
+        <CursorPos Y="79"/>
       </Unit>
       <Unit>
         <Filename Value="unit1.lfm"/>
