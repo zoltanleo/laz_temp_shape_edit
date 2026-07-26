@@ -115,7 +115,11 @@ const
   {$IFDEF LCLGTK3}
   marg = 2;
   {$ELSE}
-  marg = 1;
+    {$IFDEF LCLQT6}
+    marg = 1;
+    {$ELSE}
+    marg = 1;
+    {$ENDIF}
   {$ENDIF}
 var
   dx, dy: Integer;
