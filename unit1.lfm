@@ -1,11 +1,11 @@
 object Form1: TForm1
   Left = 586
-  Height = 152
+  Height = 170
   Top = 250
-  Width = 374
+  Width = 514
   Caption = 'Form1'
-  ClientHeight = 152
-  ClientWidth = 374
+  ClientHeight = 170
+  ClientWidth = 514
   DesignTimePPI = 120
   LCLVersion = '4.99.0.0'
   OnCreate = FormCreate
@@ -16,7 +16,7 @@ object Form1: TForm1
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Edit1
     AnchorSideBottom.Side = asrBottom
-    Left = 328
+    Left = 468
     Height = 28
     Top = 10
     Width = 36
@@ -33,7 +33,7 @@ object Form1: TForm1
     Left = 10
     Height = 28
     Top = 10
-    Width = 314
+    Width = 454
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 10
     BorderSpacing.Top = 10
@@ -52,7 +52,7 @@ object Form1: TForm1
     Left = 10
     Height = 40
     Top = 48
-    Width = 314
+    Width = 454
     Anchors = [akTop, akLeft, akRight]
     OnClick = Shape1Click
   end
@@ -63,7 +63,7 @@ object Form1: TForm1
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Shape1
     AnchorSideBottom.Side = asrBottom
-    Left = 328
+    Left = 468
     Height = 40
     Top = 48
     Width = 36
@@ -82,5 +82,54 @@ object Form1: TForm1
     BorderSpacing.Left = 5
     Caption = 'Label1'
     OnClick = Label1Click
+  end
+  object edt3: TEdit
+    AnchorSideLeft.Control = Edit1
+    AnchorSideTop.Control = Shape1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Edit1
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 28
+    Top = 98
+    Width = 454
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 10
+    TabOrder = 3
+    Text = 'edt3'
+  end
+  object btn3: TButton
+    AnchorSideLeft.Control = Button1
+    AnchorSideTop.Control = edt3
+    AnchorSideRight.Control = Button1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = edt3
+    AnchorSideBottom.Side = asrBottom
+    Left = 468
+    Height = 28
+    Top = 98
+    Width = 36
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = '...'
+    TabOrder = 4
+  end
+  object stxt3: TStaticText
+    AnchorSideLeft.Control = edt3
+    AnchorSideTop.Control = edt3
+    AnchorSideRight.Control = edt3
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = edt3
+    AnchorSideBottom.Side = asrBottom
+    Left = 10
+    Height = 28
+    Top = 98
+    Width = 454
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'это просто текст'
+    Color = clDefault
+    ParentColor = False
+    TabOrder = 5
+    OnChangeBounds = stxt3ChangeBounds
+    OnClick = stxt3Click
   end
 end
